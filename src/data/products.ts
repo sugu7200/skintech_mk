@@ -157,7 +157,7 @@ export const serums: Product[] = [
   },
   {
     id: 11,
-    name: 'Peptide Repair Serum',
+    name: 'Peptide Repair Ser',
     category: 'serum',
     description: 'Multi-peptide complex for firming and repair.',
     longDescription: 'Peptide Repair Serum blends six peptides to firm skin, smooth fine lines, and support natural collagen production for a youthful appearance.',
