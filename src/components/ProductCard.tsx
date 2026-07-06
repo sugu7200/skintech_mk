@@ -28,66 +28,66 @@ export default function ProductCard({ product, index = 0 }: ProductCardProps) {
           },
         }}
       >
-<Box
-  sx={{
-    position: 'relative',
-    overflow: 'hidden',
-    '&:hover img': {
-      transform: 'scale(1.08)',
-    },
-    '&:hover .overlay': {
-      opacity: 1,
-    },
-  }}
->
-  <CardMedia
-    component="img"
-    image={product.image}
-    alt={product.name}
-    sx={{
-      width: '100%',
-      aspectRatio: '4 / 4',
-      objectFit: 'cover',
-      transition: '0.5s',
-    }}
-  />
+        <Box
+          sx={{
+            position: 'relative',
+            overflow: 'hidden',
+            '&:hover img': {
+              transform: 'scale(1.08)',
+            },
+            '&:hover .overlay': {
+              opacity: 1,
+            },
+          }}
+        >
+          <CardMedia
+            component="img"
+            image={product.image}
+            alt={product.name}
+            sx={{
+              width: '100%',
+              aspectRatio: '4 / 4',
+              objectFit: 'fill',
+              transition: '0.5s',
+            }}
+          />
+          <CardContent
+            sx={{
+              position: 'absolute',
+              inset: 0,
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'flex-end',
+              p: 3,
+              background:
+                'linear-gradient(to top, rgba(0,0,0,.75), transparent)',
+            }}
+          >
+            <Typography
+              variant="h6"
+              sx={{ color: '#fff', fontWeight: 700, mb: 2 }}
+            >
+              {product.name}
+            </Typography>
 
-  <CardContent
-    className="overlay"
-    sx={{
-      position: 'absolute',
-      inset: 0,
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'flex-end',
-      p: 3,
-      background:
-        'linear-gradient(to top, rgba(0,0,0,.75), transparent)',
-      opacity: 0,
-      transition: '0.4s ease',
-    }}
-  >
-    <Typography
-      variant="h6"
-      sx={{ color: '#fff', fontWeight: 700, mb: 2 }}
-    >
-      {product.name}
-    </Typography>
-
-    <Button
-      variant="contained"
-      endIcon={<ArrowForwardIcon />}
-      sx={{
-        background: 'rgba(255,255,255,0.12)',
-        backdropFilter: 'blur(8px)',
-        border: '1px solid rgba(255,255,255,.3)',
-        color: '#fff',
-      }}
-    >
-      View Details
-    </Button>
-  </CardContent>
-</Box>
+            <Button
+              variant="contained"
+              endIcon={<ArrowForwardIcon />}
+              sx={{
+                background: 'rgba(255,255,255,0.12)',
+                backdropFilter: 'blur(8px)',
+                border: '1px solid rgba(255,255,255,.3)',
+                color: '#fff',
+                width: 'fit-content',
+                '&:hover': {
+                  background: 'rgba(255,255,255,0.2)',
+                },
+              }}
+            >
+              View Details
+            </Button>
+          </CardContent>
+        </Box>
 
       </Card>
     </motion.div>
